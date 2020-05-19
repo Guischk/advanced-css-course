@@ -1,0 +1,28 @@
+.u-center-text {
+	text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+//Script de génération auto des margin padding
+$sides: ('top', 'right', 'bottom', 'left');
+$space_unit: "rem";
+
+@each $prefix, $space in $spaceamounts {
+  @each $side in $sides {
+    .p-#{str-slice($side, 0, 1)}-#{$prefix} {
+      padding-#{$side}: #{$space}#{$space_unit};
+    }
+    .m-#{str-slice($side, 0, 1)}-#{$prefix} {
+      margin-#{$side}: #{$space}#{$space_unit};
+    }
+  }
+}

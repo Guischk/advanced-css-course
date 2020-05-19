@@ -1,0 +1,18 @@
+/* Version light du normalize css */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	/* Par défaut le font-size est de 16px */
+	/* On le place en % pour se baser sur une base 10 */
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}
